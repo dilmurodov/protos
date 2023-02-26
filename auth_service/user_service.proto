@@ -15,6 +15,7 @@ service UserService {
     rpc UpdateUser(UpdateUserRequest) returns (User) {}
     rpc DeleteUser(UserPrimaryKey) returns (google.protobuf.Empty) {}
     rpc ResetPassword(ResetPasswordRequest) returns (User) {}
+    rpc GetByCredentials(GetByCredentialsRequest) returns (User){}
     // rpc SendMessageToEmail(SendMessageToEmailRequest) returns (google.protobuf.Empty) {}
 
     // rpc AddUserRelation(AddUserRelationRequest) returns (UserRelation) {}
@@ -28,13 +29,6 @@ message UpsertUserInfoRequest {
     google.protobuf.Struct data = 2;
 }
 
-// "id" UUID PRIMARY KEY NOT NULL,
-//     "first_name" VARCHAR(20) NOT NULL,
-//     "last_name" VARCHAR(20) NOT NULL,
-//     "phone" VARCHAR,
-//     "username" VARCHAR ,
-//     "password" VARCHAR(1000),
-
 message CreateUserRequest {
     string first_name = 1;
     string last_name = 2;
@@ -45,6 +39,11 @@ message CreateUserRequest {
 
 message UserPrimaryKey {
     string id = 1;
+}
+
+message GetByCredentialsRequest{
+    string username = 1;
+    string password = 2;
 }
 
 message UserPrimaryKeyList {
