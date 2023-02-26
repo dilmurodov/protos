@@ -4,9 +4,12 @@ package auth_service;
 option go_package="genproto/auth_service";
 
 import "shortener.proto";
+import "google/protobuf/empty.proto";
+
 
 service ShortenerService {
     rpc CreateShortUrl(CreateShortUrlRequest) returns (CreateShortUrlResponse) {}
+    rpc UpdateShortUrl(CreateShortUrlRequest) returns (google.protobuf.Empty) {}
     rpc GetShortUrl(GetShortUrlRequest) returns (GetShortUrlResponse) {}
     rpc IncClickCount(IncClickCountRequest) returns (IncClickCountResponse) {}
     rpc HandleLongUrl(HandleLongUrlRequest) returns (HandleLongUrlResponse) {}

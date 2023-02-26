@@ -10,6 +10,7 @@ message CreateShortUrlRequest {
     string expire_date = 3;
     string id = 4;
     string short_url = 5;
+    string limit_click = 6;
 }
 
 message CreateShortUrlResponse {
