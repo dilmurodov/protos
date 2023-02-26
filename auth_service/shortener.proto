@@ -8,13 +8,18 @@ option go_package = "genproto/auth_service";
 message CreateShortUrlRequest {
     string user_id = 1;
     string long_url = 2;
-    string expiration = 3;
+    string expire_date = 3;
+    string id = 4;
+    string short_url = 5;
 }
 
 message CreateShortUrlResponse {
     string short_url = 1;
     string user_id = 2;
-    string expiration = 3;
+    string expire_date = 3;
+    string long_url = 5;
+    string craeted_at = 4;
+    string updated_at = 6;
 }
 
 message GetShortUrlRequest {
@@ -25,7 +30,9 @@ message GetShortUrlRequest {
 message GetShortUrlResponse {
     string short_url = 1;
     string user_id = 2;
-    string expiration = 3;
+    string expire_date = 3;
     string long_url = 4;
+    string created_at = 5;
+    string updated_at = 6;
 }
 
