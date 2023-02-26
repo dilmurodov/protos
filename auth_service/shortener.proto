@@ -36,3 +36,11 @@ message GetShortUrlResponse {
     string updated_at = 6;
 }
 
+message IncClickCountRequest {
+    string short_url = 1;
+}
+
+message IncClickCountResponse {
+    string short_url = 1;
+    int64 click_count = 2;
+}
