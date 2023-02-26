@@ -34,6 +34,9 @@ message GetShortUrlResponse {
     string long_url = 4;
     string created_at = 5;
     string updated_at = 6;
+    string click_count = 7;
+    string limit_click = 8;
+    string url_status = 9;
 }
 
 message IncClickCountRequest {
@@ -66,6 +69,8 @@ message UrlData {
     string updated_at = 6;
     string id = 7;
     string click_count = 8;
+    string limit_click = 9;
+    string url_status = 10;
 }
 
 message GetAllUserUrlsResponse {
