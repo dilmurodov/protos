@@ -65,8 +65,10 @@ message UrlData {
     string created_at = 5;
     string updated_at = 6;
     string id = 7;
+    string click_count = 8;
 }
 
 message GetAllUserUrlsResponse {
     repeated UrlData urls = 1;
+    int64 total_count = 2;
 }
