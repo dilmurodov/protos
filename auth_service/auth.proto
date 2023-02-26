@@ -15,3 +15,7 @@ message User {
     string created_at = 7;
     string updated_at = 8;
 }
+
+message HasAccessModel {
+    string user_id = 3;
+}
