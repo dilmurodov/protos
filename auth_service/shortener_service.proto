@@ -1,0 +1,11 @@
+syntax="proto3";
+
+package auth_service;
+option go_package="genproto/auth_service";
+
+import "shortener.proto";
+
+service ShortenerService {
+    rpc CreateShortUrl(CreateShortUrlRequest) returns (CreateShortUrlResponse) {}
+    rpc GetShortUrl(GetShortUrlRequest) returns (GetShortUrlResponse) {}
+}
