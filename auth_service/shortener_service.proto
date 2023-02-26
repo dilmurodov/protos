@@ -9,4 +9,6 @@ service ShortenerService {
     rpc CreateShortUrl(CreateShortUrlRequest) returns (CreateShortUrlResponse) {}
     rpc GetShortUrl(GetShortUrlRequest) returns (GetShortUrlResponse) {}
     rpc IncClickCount(IncClickCountRequest) returns (IncClickCountResponse) {}
+    rpc HandleLongUrl(HandleLongUrlRequest) returns (HandleLongUrlResponse) {}
+    rpc GetAllUserUrls(GetAllUserUrlsRequest) returns (GetAllUserUrlsResponse) {}
 }

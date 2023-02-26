@@ -44,3 +44,31 @@ message IncClickCountResponse {
     string short_url = 1;
     int64 click_count = 2;
 }
+
+message HandleLongUrlRequest {
+    string short_url = 1;
+}
+
+message HandleLongUrlResponse {
+    string long_url = 1;
+}
+
+message GetAllUserUrlsRequest {
+    string user_id = 1;
+}
+
+message UrlData {
+    string short_url = 1;
+    string user_id = 2;
+    string expire_date = 3;
+    string long_url = 4;
+    string created_at = 5;
+    string updated_at = 6;
+    string id = 7;
+    string click_count = 8;
+}
+
+message GetAllUserUrlsResponse {
+    repeated UrlData urls = 1;
+    int64 total_count = 2;
+}
