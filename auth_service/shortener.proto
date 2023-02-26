@@ -4,7 +4,6 @@ package auth_service;
 option go_package = "genproto/auth_service";
 
 
-
 message CreateShortUrlRequest {
     string user_id = 1;
     string long_url = 2;
@@ -24,7 +23,7 @@ message CreateShortUrlResponse {
 
 message GetShortUrlRequest {
     string user_id = 1;
-    string short_url_id = 2;   
+    string short_url = 2;   
 }
 
 message GetShortUrlResponse {
